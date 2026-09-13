@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <!-- Add font-awesome CDN if not already added -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body style="background-image:url('aboutus.avif')">
+    <div class="container">
+        <header>
+            <h1>Login</h1>
+            <p>Please enter your credentials to log in.</p>
+        </header>
+        <form id="loginForm">
+            <div class="form">
+                <div class="right">
+                    <div class="contact-form">
+                        <input type="email" id="email" required>
+                        <span>Email</span>
+                    </div>
+    
+                    <div class="contact-form">
+                        <input type="password" id="password" required>
+                        <span>Password</span>
+                    </div>
+    
+                    <div class="contact-form">
+                        <input type="submit" value="Login">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="empty"></div>
+    </div>    
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Retrieve user input
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            
+            // Perform login validation (you'll replace this with your actual validation logic)
+            if (email === "your@email.com" && password === "yourpassword") {
+                alert("Login successful!");
+                // Redirect to dashboard or another page
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>

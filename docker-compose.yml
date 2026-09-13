@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  catalog-service:
+    build: ./backend/catalog-service
+    ports:
+      - "3001:3001"
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/yoeats
+    depends_on:
+      - mongodb
+      
+  auth-service:
+    build: ./backend/auth-service
+    ports:
+      - "3003:3003"
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/yoeats
+    depends_on:
+      - mongodb
+      
+  order-service:
+    build: ./backend/order-service
+    ports:
+      - "3002:3002"
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/yoeats
+    depends_on:
+      - mongodb
+
+  delivery-service:
+    build: ./backend/delivery-service
+    ports:
+      - "3004:3004"
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/yoeats
+    depends_on:
+      - mongodb
+
+  api-gateway:
+    build: ./backend/api-gateway
+    ports:
+      - "3000:3000"
+    depends_on:
+      - catalog-service
+      - auth-service
+      - order-service
+      - delivery-service
+
+  frontend:
+    build: ./images
+    ports:
+      - "8080:80"
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:

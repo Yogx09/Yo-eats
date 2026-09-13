@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="yo-eats.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="addtocart.css">
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+    <title>Yo Eats</title>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <!-- logo -->
+        <h1 class="logo">Yo! Eats</h1>
+        <img src="yo !! eats png" alt="Yo Eats Logo">
+        <!-- menu -->
+        <div class="sidebar-menus">
+            <a href='#'><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href='#'><ion-icon name="receipt-outline"></ion-icon>Receipt</a>
+            <a href='#'><ion-icon name="wallet-outline"></ion-icon>Wallet</a>
+            <a href='#'><ion-icon name="notifications-outline"></ion-icon>Notification</a>
+            <a href='#'><ion-icon name="chatbubble-outline"></ion-icon>Contact us</a>
+            <a href='#'><ion-icon name="settings-outline"></ion-icon>Settings</a>
+        </div>
+        <!-- Logout Section -->
+        <div class="sidebar-logout">
+            <a href='#'><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <!-- main navbar -->
+        <div class="main-navbar">
+            <!-- menu when appearing on mobile (consider visibility for mobile) -->
+            <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+            <!-- search bar -->
+            <div class="search">
+                <input type="text" placeholder="Search for a dish or cuisine...">
+                <button class="search-btn">Search</button>
+            </div>
+            <!-- profile icon on the left -->
+            <div class="profile">
+                <a class="cart" href='#'><ion-icon name="cart-outline"></ion-icon></a>
+                <a class="user" href='#'><ion-icon name="person-outline"></ion-icon></a>
+            </div>
+        </div>
+        <!-- main highlights -->
+        <div class="main-highlight">
+            <!-- title section and arrow -->
+            <div class="main-header">
+                <h2 class="main-title">Today's Special</h2>
+                <div class="main-arrow">
+                    <ion-icon class="back" name="chevron-back-circle-outline"></ion-icon>
+                    <ion-icon class="next" name="chevron-forward-circle-outline"></ion-icon>
+                </div>
+            </div>
+            <!-- highlight wrapper and cards -->
+            <div class="highlight-wrapper">
+                <!-- Highlight 1 -->
+                <!-- Highlight 1 -->
+                <div class="highlight-card">
+                    <img class="highlight-img" src="background.jpg" alt="Biryani Image">
+                    <div class="highlight-desc">
+                        <h4>Biryani</h4>
+                        <p>Rs:149</p>
+                    </div>
+                </div>
+                <!-- Highlight 2 -->
+                <div class="highlight-card">
+                    <img class="highlight-img" src="Pizza.jpg" alt="Pizza Image">
+                    <div class="highlight-desc">
+                        <h4>Pizza</h4>
+                        <p>Rs:179</p>
+                    </div>
+                </div>
+                <!-- Highlight 3 -->
+                <div class="highlight-card">
+                    <img class="highlight-img" src="mango lassi.jpg" alt="Mango Lassi Image">
+                    <div class="highlight-desc">
+                        <h4>Mango Lassi</h4>
+                        <p>Rs:69</p>
+                    </div>
+                </div>
+                <!-- Highlight 4 -->
+                <div class="highlight-card">
+                    <img class="highlight-img" src="mango lassi.jpg" alt="Masala Dosa Image">
+                    <div class="highlight-desc">
+                        <h4>Masala Dosa</h4>
+                        <p>Rs:45</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- ... (your existing code) -->
+            </div>
+        </div>
+        <!-- main menus -->
+        <div class="main-menus">
+            <!-- filter section -->
+            <!-- ... (your existing code) -->
+        </div>
+    </div>
+
+    <div class="header">
+        <p class="logo">LOGO</p>
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+    </div>
+    <div class="container">
+        <div id="root"></div>
+        <div class="sidebar">
+            <div class="head"><p>My Cart</p></div>
+            <div id="cartItem">Your cart is empty</div>
+            <div class="foot">
+                <h3>Total</h3>
+                <h2 id="total">$ 0.00</h2>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="app.js"></script>
+    <script src="addtocart.js"></script>
+</body>
+
+</html>

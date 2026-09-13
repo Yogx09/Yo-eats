@@ -1,0 +1,469 @@
+:root {
+    --primarycolour: #f2364f;
+    --secondarycolour: #ec0000;
+    --whitecolour: #fff;
+    --blackcolour: #060000;
+    --softgreencolour: #d9f2ee;
+    --darkgreycolour: #a7a7a7;
+    --greycolour: #f5f5f5;
+    --yellowcolor: #FFFFE0;
+    --midyellowcolor: #ecec66;
+    --darkgreen: #588970;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Open Sans", sans-serif;
+    transition: background-color  color 0.3s;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+  /* Sidebar Styles */
+  .sidebar {
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    background-color: var(--primarycolour);
+    color: var(--whitecolour);
+    z-index: 2;
+    transition: width;
+}
+
+.sidebar a:hover {
+    transform: scale(1.1);
+    color: var(--blackcolour);
+}
+
+.sidebar-menus,
+.sidebar-logout {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-menus a,
+.sidebar-logout a {
+    padding: 5% 8%;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--whitecolour);
+}
+
+.sidebar-menus a ion-icon {
+    font-size: 25px;
+}
+
+.sidebar-menus a:hover{
+    background-color: var(--secondarycolour);
+    border-radius: 45px;
+}
+.sidebar-logout a:hover {
+    background-color: var(--blackcolour);
+    border-radius: 45px;
+    color: var(--midyellowcolor);
+    
+}
+/* Main Content Styles */
+.main {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2%;
+    background-color: var(--softgreencolour);
+    margin-left: 250px;
+    transition: margin-left 0.3s;
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Search Styles */
+.search {
+    width: 60%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--whitecolour);
+    border-radius: 20px;
+}
+
+.search input {
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.search-btn {
+    background-color: var(--midyellowcolor);
+    color: var(--blackcolour);
+    border: none;
+    border-radius: 20px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.search:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.search-btn:hover {
+    background-color: var(--primarycolour);
+    transform: scale(1.1)
+}
+
+/* Profile Styles */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cart,
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--whitecolour);
+    font-size: 20px;
+    color: var(--primarycolour);
+    text-decoration: none;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.cart:hover,
+.user:hover {
+    background-color: var(--blackcolour);
+    transform: translateY(-0.25rem);
+}
+.detail-add-to-cart:hover
+.user:hover {
+    background-color: #ecec66;
+}
+
+/* Main Highlight Styles */
+.main-highlight {
+    margin: 3% 0;
+    padding: 2%;
+    background-color: var(--midyellowcolor);
+    border-radius: 8px;
+}
+
+.main-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-title {
+    font-size: 20px;
+}
+
+.main-arrow {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.back,
+.next {
+    cursor: pointer;
+    color: var(--primarycolour);
+    margin: 0 10px;
+    
+}
+
+.back:hover,
+.next:hover {
+    color: var(--blackcolour);
+    transform: scale(1.1);
+}
+
+/* Highlight Styles */
+.highlight-wrapper {
+    width: 100%;
+    display: flex;
+    padding: 1%;
+    border-radius: 8px;
+    gap: 1.5rem;
+    overflow-x: hidden;
+}
+
+.highlight-card {
+    display: flex;
+    flex-direction: row;
+    min-width: 200px;
+    width: 80%;
+    height: 100%;
+    gap: 1rem;
+    border-radius: 8px;
+    padding: 1%;
+    background-color: var(--yellowcolor);
+    cursor: pointer;
+    
+}
+
+.highlight-img {
+    width: 75px;
+    height: 75px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.highlight-desc h4 {
+    color: var(--blackcolour);
+}
+
+.highlight-desc p {
+    color: var(--primarycolour);
+    font-size: 15px;
+}
+
+.highlight-card:hover {
+    background-color: var(--whitecolour);
+    
+}
+
+/* Main Menus Styles */
+.main-menus {
+    min-height: 100%;
+    background-color: var(--greycolour);
+    padding: 2%;
+    border-radius: 8px;
+}
+
+.main-filter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.back-menus,
+.next-menus {
+    cursor: pointer;
+    
+}
+
+.back-menus:hover,
+.next-menus:hover {
+    color: var(--primarycolour);
+    transform: scale(1.1);
+}
+
+.filter-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    height: 100px;
+    width: 100%;
+    gap: 1.2rem;
+}
+
+.filter-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 80px;
+    height: 100%;
+    background-color: var(--whitecolour);
+    color: #060000;
+    border-radius: 8px;
+    border: 1px solid var(--softgreencolour);
+    font-size: 14px;
+}
+
+.filter-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    font-size: 30px;
+    background-color: var(--softgreencolour);
+    color: var(--secondarycolour);
+    border-radius: 8px;
+    
+}
+
+.filter-cart:hover {
+    background-color: var(--darkgreen);
+    color: var(--whitecolour);
+    cursor: pointer;
+    
+    
+}
+
+.filter-cart:hover .filter-icon,
+.filter-icon:hover {
+    background-color: var(--whitecolour);
+    color: var(--blackcolour);
+}
+
+.divider {
+    margin: 1rem 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--darkgreen);
+    border: none;
+}
+
+/* Main Detail Styles */
+.main-detail {
+    margin: 1rem 0 1.5rem 0;
+}
+
+.detail-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 100%;
+    margin-top: 1rem;
+    gap: 2%;
+    border-radius: 8px;
+}
+
+.detail-card {
+    min-height: 280px;
+    height: 100%;
+    background-color: var(--whitecolour);
+    border-radius: 8px;
+    margin: 1% 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.detail-img {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.8);
+}
+
+.detail-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5%;
+    width: 100%;
+}
+
+.detail-sub {
+    font-size: 12px;
+    color: var(--darkgreycolour);
+    letter-spacing: 0.5;
+    margin: 1% 0;
+}
+
+.Price {
+    color: var(--secondarycolour);
+    transition: letter-spacing 0.3s;
+    
+}
+.detail-add-to-cart {
+    opacity: 1; /* Hide the add to cart button by default */
+    align-items: center;
+    transition: opacity 0.3s; /* Add transition effect for a smooth change */
+}
+
+.detail-add-to-cart:hover {
+    opacity: 1; /* Make the add to cart button visible on hover */
+    color: var(--midyellowcolor); /* Change the color to the desired secondary color */
+}
+
+.detail-favorites {
+    font-size: 20px;
+}
+
+.detail-card:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+}
+
+.detail-card:hover .detail-name h4 {
+    color: var(--darkgreen);
+    
+}
+
+.detail-card:hover .Price {
+    letter-spacing: 1.5px;
+}
+
+/* Mobile View Styles */
+@media screen and (max-width: 640px) {
+    .sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        z-index: 2;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        text-decoration: none;
+        font-size: 20px;
+        background-color: var(--whitecolour);
+        color: var(--primarycolour);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        height: 40px;
+        border-radius: 50%;
+        z-index: 3;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        transition: z-index 0.3s;
+    }
+
+    .menu-toggle:active {
+        z-index: 10;
+    }
+
+    .sidebar.active {
+        display: flex;
+        z-index: 10;
+    }
+
+    .back,
+    .next {
+        margin: 0;
+    }
+}
