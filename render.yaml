@@ -1,0 +1,57 @@
+services:
+  - type: web
+    name: yo-eats-catalog
+    env: node
+    rootDir: backend/catalog-service
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGO_URI
+        sync: false
+        
+  - type: web
+    name: yo-eats-auth
+    env: node
+    rootDir: backend/auth-service
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGO_URI
+        sync: false
+
+  - type: web
+    name: yo-eats-order
+    env: node
+    rootDir: backend/order-service
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGO_URI
+        sync: false
+
+  - type: web
+    name: yo-eats-delivery
+    env: node
+    rootDir: backend/delivery-service
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGO_URI
+        sync: false
+
+  - type: web
+    name: yo-eats-gateway
+    env: node
+    rootDir: backend/api-gateway
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGO_URI
+        sync: false
+
+  - type: web
+    name: yo-eats-frontend
+    env: static
+    rootDir: images
+    buildCommand: echo "No build required"
+    staticPublishPath: ./
